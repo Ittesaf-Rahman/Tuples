@@ -1,0 +1,49 @@
+Number = (1, 2, 3, 4, 5, 6, 7)
+string = ('Abir', 'Ittesaf', 'Azmain', 'Ayaan', 'Python')
+print(Number)
+print(len(string))
+for i in range(2):
+    print(string[i])
+print('Number + string = ', Number + string)
+nested = ('a', 'b',(1,2,3),['Hello world', 'Abir', 'Ittesaf'])
+print(nested)
+
+#activity 1 Tuple value
+tuple = (1, 'Python', 99.99, True,2,3,4,5,6,7,8,9,9,9,9)
+print(tuple)
+print(tuple.count(9))
+#slice 1
+print(tuple[2:4])
+#slice 2
+print(tuple[:-1])
+
+#activity 2 Flip Flop 
+def flip(r):
+    end = len(r) - 1
+    start = 0
+    while end>start:
+        if r[start] != r[end]:
+            return False
+        start = start + 1
+        end = end -1
+    return True
+tuple_value = (1, 2, 2, 1)
+tuple = flip(tuple_value)
+if tuple:
+    print("The tuple is flip flop")
+else:
+    print("The tuple is not flip flop")
+
+#activity 3 Weather condition
+weather = (0, 0, 0, 0, 1, 1,1)
+sunny = 0
+winter = 0
+for i in range(0,7):
+    if weather[i] == 0:
+        winter = winter + 1
+    else:
+        sunny = sunny + 1
+if sunny>winter:
+    print("It is a good week")
+else:
+    print("It is a bad week")
